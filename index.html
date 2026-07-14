@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vòng quay may mắn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>VÒNG QUAY MAY MẮN</h1>
+
+        <div class="form-box">
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Nhập họ và tên"
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Nhập số điện thoại"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Nhập Gmail"
+            >
+        </div>
+
+        <div class="wheel-wrapper">
+            <div class="pointer"></div>
+
+            <canvas
+                id="wheel"
+                width="500"
+                height="500"
+            ></canvas>
+
+            <button id="spinButton">
+                QUAY NGAY
+            </button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

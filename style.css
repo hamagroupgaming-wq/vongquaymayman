@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.form-box {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-box input:focus {
+    border-color: #2575fc;
+}
+
+.wheel-wrapper {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#wheel {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.pointer {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 45px solid #ff2e2e;
+}
+
+#spinButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    border: 8px solid white;
+    border-radius: 50%;
+    background: #ffcc00;
+    color: #222;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+#spinButton:hover {
+    background: #ffd633;
+}
+
+#spinButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#message {
+    min-height: 30px;
+    margin-top: 22px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d60000;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #spinButton {
+        width: 90px;
+        height: 90px;
+        font-size: 14px;
+        border-width: 6px;
+    }
+}
